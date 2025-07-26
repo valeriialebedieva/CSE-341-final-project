@@ -1,0 +1,25 @@
+{
+  "name": "cse-341-final-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriialebedieva/CSE-341-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeriialebedieva/CSE-341-final-project/issues"
+  },
+  "homepage": "https://github.com/valeriialebedieva/CSE-341-final-project#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0"
+  }
+}
