@@ -1,0 +1,161 @@
+### Groceries API Endpoints
+
+# Get all groceries
+GET https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+###
+
+# Get grocery by ID (replace {id} with actual grocery ID)
+GET https://cse-341-final-project-z4pd.onrender.com/groceries/{id}
+Content-Type: application/json
+
+###
+
+# Create a new grocery item
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "Apples",
+    "quantity": 5,
+    "price": 2.99
+}
+
+###
+
+# Create another grocery item
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "Bananas",
+    "quantity": 10,
+    "price": 1.49
+}
+
+###
+
+# Create a grocery item with decimal values
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "Milk",
+    "quantity": 2,
+    "price": 3.50
+}
+
+###
+
+# Update grocery by ID (replace {id} with actual grocery ID)
+PUT https://cse-341-final-project-z4pd.onrender.com/groceries/{id}
+Content-Type: application/json
+
+{
+    "name": "Fresh Apples",
+    "quantity": 8,
+    "price": 3.49
+}
+
+###
+
+# Delete grocery by ID (replace {id} with actual grocery ID)
+DELETE https://cse-341-final-project-z4pd.onrender.com/groceries/{id}
+Content-Type: application/json
+
+###
+
+# Test validation - Missing required fields
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "",
+    "quantity": 5
+}
+
+###
+
+# Test validation - Missing price
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "Test Item",
+    "quantity": 5
+}
+
+###
+
+# Test validation - Negative quantity
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "Test Item",
+    "quantity": -1,
+    "price": 2.99
+}
+
+###
+
+# Test validation - Negative price
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": "Test Item",
+    "quantity": 5,
+    "price": -2.99
+}
+
+###
+
+# Test validation - Invalid data types
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{
+    "name": 123,
+    "quantity": "five",
+    "price": "expensive"
+}
+
+###
+
+# Test validation - Empty request body
+POST https://cse-341-final-project-z4pd.onrender.com/groceries/
+Content-Type: application/json
+
+{}
+
+###
+
+# Test invalid ObjectId format
+GET https://cse-341-final-project-z4pd.onrender.com/groceries/invalid-id
+Content-Type: application/json
+
+###
+
+# Test non-existent grocery
+GET https://cse-341-final-project-z4pd.onrender.com/groceries/507f1f77bcf86cd799439011
+Content-Type: application/json
+
+###
+
+# Test update with invalid data
+PUT https://cse-341-final-project-z4pd.onrender.com/groceries/{id}
+Content-Type: application/json
+
+{
+    "name": "",
+    "quantity": -5,
+    "price": -1.99
+}
+
+###
+
+# Test delete non-existent item
+DELETE https://cse-341-final-project-z4pd.onrender.com/groceries/507f1f77bcf86cd799439011
+Content-Type: application/json 

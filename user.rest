@@ -1,0 +1,119 @@
+### User API Endpoints
+
+# Get all users
+GET https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+###
+
+# Get user by ID (replace {id} with actual user ID)
+GET https://cse-341-final-project-z4pd.onrender.com/user/{id}
+Content-Type: application/json
+
+###
+
+# Create a new user
+POST https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+{
+    "firstname": "John",
+    "lastname": "Doe",
+    "username": "johndoe",
+    "password": "password123"
+}
+
+###
+
+# Create another user
+POST https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+{
+    "firstname": "Jane",
+    "lastname": "Smith",
+    "username": "janesmith",
+    "password": "securepass456"
+}
+
+###
+
+# Update user by ID (replace {id} with actual user ID)
+PUT https://cse-341-final-project-z4pd.onrender.com/user/{id}
+Content-Type: application/json
+
+{
+    "firstname": "John",
+    "lastname": "Doe Updated",
+    "username": "johndoe_updated",
+    "password": "newpassword123"
+}
+
+###
+
+# Delete user by ID (replace {id} with actual user ID)
+DELETE https://cse-341-final-project-z4pd.onrender.com/user/{id}
+Content-Type: application/json
+
+###
+
+# Test validation - Missing required fields
+POST https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+{
+    "firstname": "",
+    "lastname": "Doe",
+    "username": "testuser"
+}
+
+###
+
+# Test validation - Invalid data types
+POST https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+{
+    "firstname": "John",
+    "lastname": "Doe",
+    "username": "testuser",
+    "password": 123
+}
+
+###
+
+# Test validation - Short password
+POST https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+{
+    "firstname": "John",
+    "lastname": "Doe",
+    "username": "testuser",
+    "password": "123"
+}
+
+###
+
+# Test validation - Duplicate username
+POST https://cse-341-final-project-z4pd.onrender.com/user/
+Content-Type: application/json
+
+{
+    "firstname": "Another",
+    "lastname": "User",
+    "username": "johndoe",
+    "password": "password123"
+}
+
+###
+
+# Test invalid ObjectId format
+GET https://cse-341-final-project-z4pd.onrender.com/user/invalid-id
+Content-Type: application/json
+
+###
+
+# Test non-existent user
+GET https://cse-341-final-project-z4pd.onrender.com/user/507f1f77bcf86cd799439011
+Content-Type: application/json 
