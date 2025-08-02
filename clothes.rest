@@ -1,0 +1,28 @@
+### Get all clothes
+GET https://cse-341-final-project-z4pd.onrender.com/clothes
+
+### Get one clothes item by ID
+GET https://cse-341-final-project-z4pd.onrender.com/clothes/{{clothesId}}
+
+### Add a new clothes item
+POST http://localhost:3000/clothes
+Content-Type: application/json
+
+{
+  "name": "Sweater",
+  "size": "L",
+  "price": 29.99
+}
+
+### Update a clothes item by ID
+PUT https://cse-341-final-project-z4pd.onrender.com/clothes/{{clothesId}}
+Content-Type: application/json
+
+{
+  "name": "Updated Sweater",
+  "size": "XL",
+  "price": 34.99
+}
+
+### Delete a clothes item by ID
+DELETE https://cse-341-final-project-z4pd.onrender.com/clothes/{{clothesId}} 

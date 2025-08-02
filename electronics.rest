@@ -1,0 +1,28 @@
+### Get all electronics
+GET https://cse-341-final-project-z4pd.onrender.com/electronics
+
+### Get one electronics item by ID
+GET https://cse-341-final-project-z4pd.onrender.com/electronics/{{electronicsId}}
+
+### Add a new electronics item
+POST http://localhost:3000/electronics
+Content-Type: application/json
+
+{
+  "name": "Tablet",
+  "brand": "Apple",
+  "price": 499.99
+}
+
+### Update an electronics item by ID
+PUT https://cse-341-final-project-z4pd.onrender.com/electronics/{{electronicsId}}
+Content-Type: application/json
+
+{
+  "name": "iPad Pro",
+  "brand": "Apple",
+  "price": 799.99
+}
+
+### Delete an electronics item by ID
+DELETE https://cse-341-final-project-z4pd.onrender.com/electronics/{{electronicsId}} 
